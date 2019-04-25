@@ -38,7 +38,7 @@ ALTER TABLE `sys_config`
 ADD COLUMN `cms_url`  varchar(255) NULL COMMENT '管理系统的url' AFTER `domain`;
 
 INSERT INTO `sys_resources` VALUES ('71', '推送消息', 'menu', '/notice', 'notice', '40', NULL, '0', '1', '', '2018-07-05 11:30:24', '2018-07-05 11:30:24');
-UPDATE `sys_config` SET `cms_url`='http://localhost:8085' WHERE (`id`='1')
+UPDATE `sys_config` SET `cms_url`='http://localhost:8085' WHERE (`id`='1');
 -- 如果直接执行update语句，请手动清空redis缓存
 
 
