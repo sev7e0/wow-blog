@@ -307,7 +307,7 @@ $(function () {
         var $a = $(this).find("a");
         var $count = $a.find("i.count");
         var id = $a.data("id");
-        $.bubble.unbind();
+        // $.bubble.unbind();
         $.ajax({
             type: "post",
             url: "/api/doPraise/" + id,

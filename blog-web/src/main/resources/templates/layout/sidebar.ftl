@@ -8,18 +8,27 @@
         </div>
     <#else>
         <div class="sidebar-module" style="position: relative;">
-            <a href='https://gitee.com/yadong.zhang/DBlog' target="_blank" rel="external nofollow"><img src='https://gitee.com/yadong.zhang/DBlog/widgets/widget_1.svg?color=07b83f' alt='Fork me on Gitee' style="position: absolute;right: 0;"/></a>
-            <h5 class="custom-title"><i class="fa fa-home fa-fw icon"></i><strong>关于我</strong><small></small></h5>
+            <h5 class="custom-title"><i class="fa fa-hand-peace-o fa-fw icon"></i><strong>关于我</strong><small></small></h5>
             <div class="widget">
                 <div id="feed_widget">
                     <div class="feed-about">
-                        <div class="about-main">
-                            <div class="about-img"><a href="${config.wxCode}" class="showImage" name="微信公众号"><img src="${config.wxCode}" alt="微信公众号"></a></div>
-                            <div class="about-name">${config.siteName}</div>
-                            <div class="about-the">${config.siteDesc?if_exists}</div>
-                        </div>
+                           <ul class="list-unstyled">
+                               <li><i class="fa fa-info-circle fa-fw"></i>博主：<small>李</small></li>
+                               <li><i class="fa fa-user-circle fa-fw"></i>职业：<small>进城务工人员</small></li>
+                               <li>
+
+                            <i class="fa fa-github fa-fw"></i>GitHub：<small><a href="${config.github}" name="github" target="_blank" rel="external nofollow">Sev7e0</a></small>
+                               </li>
+                               <li>
+
+                           <i class="fa fa-envelope-o fa-fw"></i>邮箱：<small><a href="mailto:${config.authorEmail}" name="email" target="_blank" rel="external nofollow">sev7e0@mail.com</a></small>
+                              </li>
+                              <li>
+                          <i class="fa fa-home fa-fw"></i>微博：<small><a href="${config.weibo}" name="点击查看我的微博" target="_blank" rel="external nofollow">一个丑人</a></small>
+                             </li>
+                           </ul>
                         <div class="clear"></div>
-                        <!-- 方案一：图标展示 -->
+                        <!-- 方案一：图标展示
                         <ul class="widget-icon">
                             <li class="weixin auto-shake" data-container="body"
                                 data-toggle="popover" data-trigger="hover" data-placement="bottom" data-html="true" data-content="<img src='${config.wxCode}' style='width: 130px;' alt='QR Code'>">
@@ -34,7 +43,14 @@
                             <li class="github auto-shake">
                                 <a class="tag-icon" href="${config.github}" name="点击查看我的github" target="_blank" rel="external nofollow"><i class="fa fa-github"></i></a>
                             </li>
-                        </ul>
+                        </ul>-->
+                        <!-- 方案二：列表展示
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-info-circle fa-fw"></i>博主：<small>李</small></li>
+                            <li><i class="fa fa-user-circle fa-fw"></i>职业：<small>进城劳务人员</small></li>
+                            <li><i class="fa fa-home fa-fw"></i>微博：<small>一个丑人</small></li>
+                            <li><i class="fa fa-envelope-square fa-fw"></i>邮箱：<small>sev7e0@mail.com</small></li>
+                        </ul>-->
                     </div>
                 </div>
             </div>

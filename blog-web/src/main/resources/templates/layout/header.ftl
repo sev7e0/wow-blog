@@ -27,7 +27,7 @@
             </div>
             <ul class="nav navbar-nav ">
                 <li>
-                    <a href="/" class="menu_a"><i class="fa fa-home"></i>首页</a>
+                    <a href="/" class="menu_a"><i class="fa fa-home"></i>Home</a>
                 </li>
                 <@zhydTag method="types">
                     <#if types?? && types?size gt 0>

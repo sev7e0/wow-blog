@@ -25,7 +25,7 @@
                 <div class="info">
                     本站所有标注为原创的文章，转载请标明出处。<br>
                     本站所有转载的文章，一般都会在文章中注明原文出处。<br>
-                    所有转载的文章皆来源于互联网，若因此对原作者造成侵权，烦请原作者<a target="_blank" href="mailto:yadong.zhang0415@gmail.com" title="点击给我发邮件" data-toggle="tooltip" data-placement="bottom" rel="external nofollow"><strong>告知</strong></a>，我会立刻删除相关内容。
+                    所有转载的文章皆来源于互联网，若因此对原作者造成侵权，烦请原作者<a target="_blank" href="mailto:sev7e0@gmail.com" title="点击给我发邮件" data-toggle="tooltip" data-placement="bottom" rel="external nofollow"><strong>告知</strong></a>，我会立刻删除相关内容。
                 </div>
                 <@praise></@praise>
             </div>
@@ -39,6 +39,6 @@
 </div>
 
 <@footer>
-    <script src="https://v1.hitokoto.cn/?encode=js&c=d&select=%23hitokoto" defer></script>
+    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 </@footer>
 </@compress>

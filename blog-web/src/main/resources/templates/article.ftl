@@ -89,11 +89,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="blog-body">
+            <!--隐藏广告-->
+            <!--<div class="blog-body">
                 <a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wylo59db&utm_source=wylo59db" target="_blank" rel="external nofollow">
                     <img src="${config.staticWebSite}/img/ad/aliyun_sale1000-60.png" alt="阿里云首购8折" class="img-responsive" style="width: 100%;">
                 </a>
-            </div>
+            </div>-->
             <div class="blog-body prev-next">
                 <nav class="nav-single wow" data-wow-delay="0.3s">
                     <#if other.prev>
@@ -204,7 +205,7 @@
         var coverImg = $("#cover-img").attr("src") || "${config.staticWebSite}/img/default_article_cover.jpg";
         window._bd_share_config={"common":{"bdSnsKey":{},"bdText":bdText,"bdMini":"2","bdMiniList":["mshare","qzone","tsina","bdysc","weixin","renren","tqq","kaixin001","tqf","tieba","douban","bdhome","sqq","youdao","sdo","qingbiji","mail","isohu","ty","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":coverImg,"bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
     </script>
-    <script src="https://v1.hitokoto.cn/?encode=js&c=d&select=%23hitokoto" defer></script>
+    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.js"></script>
 </@footer>

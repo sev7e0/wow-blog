@@ -63,9 +63,9 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">山无棱江水为竭，冬雷震震夏雨雪，才敢请君舍</h4>
+                <h4 class="modal-title">心意领啦！</h4>
             </div>
-            <div class="modal-body">
+            <!-- 不要赞助 <div class="modal-body">
                 <div class="rewardType" align="center">
                     <ul class="list-unstyle list-inline">
                         <li style="margin-right: 20px;">
@@ -80,7 +80,7 @@
                 <div style="width: 100%;color: #a3a3a3;font-size: 16px;font-family: 'Microsoft YaHei';text-align: center;">
                     转账时请备注“<strong>博客赞助</strong>”
                 </div>
-            </div>
+            </div>-->
         </div>
         <small class="font-bold"></small>
     </div>
@@ -100,8 +100,6 @@
                 <p>
                     <ul class="list-unstyled list-inline">
                         <li>其他连接：</li>
-                        <li><a href="https://mi.aliyun.com/shop/19462" target="_blank" data-toggle="tooltip" data-placement="bottom" rel="external nofollow"><i class="fa fa-globe fa-fw fa-spin"></i>域名出售</a></li>
-                        <li><a href="${config.siteUrl}/updateLog" name="更新记录" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-file-o fa-fw"></i>更新记录</a></li>
                         <li><a href="${config.siteUrl}/disclaimer" name="免责声明" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-file-o fa-fw"></i>免责声明</a></li>
                     </ul>
                 </p>

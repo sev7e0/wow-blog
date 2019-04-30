@@ -17,9 +17,10 @@
             <div class="blog-body expansion">
                 <div class="alert alert-default alert-dismissible" role="alert" style="padding: 0px;">
                     <ul>
-                        <li><i class="fa fa-lightbulb-o fa-fw"></i> 随便留言，只要不是反人类、反国家的危险言论。<strong>相信我！删除真的只需要1秒！</strong></li>
-                        <li><i class="fa fa-lightbulb-o fa-fw"></i> 欢迎各种花式留言！e.g.<code>System.out.println("突如其来的骚，闪了老子的腰！");</code></li>
-                        <li><i class="fa fa-heartbeat fa-fw"></i> <strong>爱谁谁...</strong></li>
+                        <li><i class="fa fa-heart fa-fw"></i> <strong>欢迎留言！</strong></li>
+                        <li><i class="fa fa-heart fa-fw"></i> <strong>欢迎留言！</strong></li>
+                        <li><i class="fa fa-heart fa-fw"></i> <strong>欢迎留言！</strong></li>
+                        <li><i class="fa fa-hand-peace-o fa-fw"></i> <strong>重要的事情说三遍！</strong></li>
                     </ul>
                 </div>
             </div>
@@ -39,7 +40,7 @@
 </div>
 
 <@footer>
-    <script src="https://v1.hitokoto.cn/?encode=js&c=d&select=%23hitokoto" defer></script>
+    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.js"></script>

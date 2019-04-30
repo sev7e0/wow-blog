@@ -607,12 +607,6 @@ $(document).ready(function () {
     });
 
     var notice = [
-        '<strong>Hi Body!</strong> 前台首页的 “轮播”只会显示“推荐文章”哦',
-        '要想百度搜索引擎快速收录文章，可以试试“推送”功能哦',
-        '批量推送文章到百度可以一次提交多篇文章哦',
-        '碰到页面显示和数据库内容不一致的情况，可以先考虑清下redis缓存哦',
-        '不可以随便用“文章搬运工”去爬取别人未授权的文章哈',
-        '使用过程中如果有不能解决的问题，请去提issue哈，在群里消息太多，有时候会看不到消息记录',
     ];
     var $noticeBox = $("#notice-box");
     var tpl = '{{#data}}<li class="scrolltext-title">'

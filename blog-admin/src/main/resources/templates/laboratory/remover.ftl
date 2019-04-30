@@ -330,7 +330,6 @@
                     <li>1.本工具开发初衷只是用来迁移 <strong>自己的文章</strong> 所用，因此不可用该工具 <strong>恶意窃取</strong> 他人劳动成果！</li>
                     <li>2.因不听劝阻，使用该工具恶意窃取他们劳动成果而造成的一切不良后果，本人表示：坚决不背锅！</li>
                     <li>3.如果该工具不好用，你们绝对不能打我！</li>
-                    <li>4.有问题、建议，请 <a href="https://gitee.com/yadong.zhang/DBlog/issues" target="_blank">提Issue</a>！</li>
                 </ul>
             </div>
             <div class="modal-footer">
