@@ -347,11 +347,11 @@ $.extend({
                         var oldCount = $(target).find('span.count').text();
                         $(target).find('span.count').text(parseInt(oldCount) + 1);
                     }
-                    $.bubble.init();
+                    //$.bubble.init();
                 },
                 error: function () {
                     $.alert.ajaxError();
-                    $.bubble.init();
+                    //$.bubble.init();
                 }
             });
         },
@@ -368,11 +368,11 @@ $.extend({
                         var oldCount = $(target).find('span.count').text();
                         $(target).find('span.count').text(parseInt(oldCount) + 1);
                     }
-                    $.bubble.init();
+                    //$.bubble.init();
                 },
                 error: function () {
                     $.alert.ajaxError();
-                    $.bubble.init();
+                    //$.bubble.init();
                 }
             });
         },

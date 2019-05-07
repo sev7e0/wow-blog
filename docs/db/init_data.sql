@@ -101,7 +101,7 @@ INSERT INTO `blog`.`sys_template` VALUES ('10', 'TM_NGINX_FILE_SERVER', 'server 
 # 清空系统更新通知表
 TRUNCATE TABLE `blog`.`sys_update_recorde`;
 # 初始化系统更新通知
-INSERT INTO `blog`.`sys_update_recorde` VALUES ('1', '1.0.1', '第一版', now(), now(), now());
+INSERT INTO `blog`.`sys_update_recorde` VALUES ('1', '0.0.1', '第一版', now(), now(), now());
 
 # 清空系统资源表
 TRUNCATE TABLE `blog`.`sys_resources`;

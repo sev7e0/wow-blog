@@ -322,11 +322,11 @@ $(function () {
                     });
                     $count.text(parseInt($count.text()) + 1);
                 }
-                $.bubble.init();
+                //$.bubble.init();
             },
             error: function () {
                 $.alert.ajaxError();
-                $.bubble.init();
+                //$.bubble.init();
             }
         });
     });

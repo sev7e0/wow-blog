@@ -28,13 +28,13 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="comment-detail-modal-label">评论信息框</h4>
-                <small><i class="fa fa-lightbulb-o fa-fw"></i>可以通过QQ号实时获取昵称和头像</small>
+                <small><i class="fa fa-lightbulb-o fa-fw"></i>写点什么吧，这样我才能记住你呦～</small>
             </div>
             <div class="modal-body">
                 <form id="detail-form">
                     <input type="hidden" name="avatar">
                     <div class="form-group input-logo">
-                        <input type="text" class="form-control" name="qq" placeholder="选填" value="">
+                        <input type="text" class="form-control" name="qq" placeholder="选填～只要输入QQ号就可实时获取昵称和头像" value="">
                         <img class="pull-left hide" alt="">
                         <span class="fa fa-qq pull-left" aria-hidden="true">QQ</span>
                     </div>
@@ -103,7 +103,7 @@
                         <li><a href="${config.siteUrl}/disclaimer" name="免责声明" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-file-o fa-fw"></i>免责声明</a></li>
                     </ul>
                 </p>
-                <p>托管于<a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wylo59db" target="_blank" name="阿里云-为了无法计算的价值" data-toggle="tooltip" data-placement="bottom" rel="external nofollow">阿里云</a> & · <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank" name="查看备案信息" data-toggle="tooltip" data-placement="bottom" rel="external nofollow">鲁ICP备17054970号-1</a></p>
+                <p>托管于<a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wylo59db" target="_blank" name="阿里云-为了无法计算的价值" data-toggle="tooltip" data-placement="bottom" rel="external nofollow">阿里云</a> & · <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank" name="查看备案信息" data-toggle="tooltip" data-placement="bottom" rel="external nofollow">暂未备案</a></p>
                 <p>Copyright &copy; ${.now?string("yyyy")} All Rights Reserved | Powered by OneBlog  </p>
                 <#if url?exists && (url == "index")>
 

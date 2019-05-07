@@ -13,15 +13,12 @@
         <div id="scrolldiv">
             <div class="scrolltext">
                 <ul class="list-unstyled" id="notice-box">
+                    <!--
                     <li class="scrolltext-title">
-                        <a href="javascript:void(0)" rel="bookmark">本站正式启用新域名:<a href="https:/www.zhyd.me" target="_blank"><strong>https:/www.zhyd.me</strong></a></a>
+                        <a href="javascript:void(0)" rel="bookmark">这块注释掉原有的轮播</a>
                     </li>
                     <li class="scrolltext-title">
-                        <a href="javascript:void(0)" rel="bookmark">活了二十多年，没能为祖国、为人民做点什么，每思及此，伤心欲绝。</a>
-                    </li>
-                    <li class="scrolltext-title">
-                        <a href="javascript:void(0)" rel="bookmark">其实我们可以将所有的问题归结为两种：一种是没饭吃饿出来的；一种是吃饱了撑出来的。</a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>
