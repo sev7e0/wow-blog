@@ -438,17 +438,17 @@ a:-webkit-any-link {
 }
 
 .navbar-default .menu-box .navbar-collapse ul .active a {
-    /*background-color: #c40000;
-    color: #fff;*/
+    /*background-color: initial!important;*/
+    /*color: #fff;*/
     color: rgba(36, 172, 215, 0.95) !important;
-    /*border-bottom: 4px solid rgba(36, 172, 215, 0.95) !important;*/
-    font-weight: 700;
+    border-bottom: 4px solid rgba(36, 172, 215, 0.95) !important;
+    /*font-weight: 700;*/
     background-color: initial !important;
 }
 
 .navbar-default .menu-box .navbar-collapse ul li a:hover {
     color: rgba(36, 140, 183, 0.95) !important;
-    font-weight: 700;
+    /*font-weight: 700;*/
     background-color: initial !important;
 }
 
@@ -585,7 +585,7 @@ a:-webkit-any-link {
     background: url(../img/back-top.png) no-repeat left top;
     width: 55px;
     height: 55px;
-    color: #fff;
+    color: #3194ff;
     padding: 15px;
     border-radius: 4px;
     z-index: 100;

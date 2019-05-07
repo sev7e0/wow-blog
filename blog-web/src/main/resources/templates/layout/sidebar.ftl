@@ -23,34 +23,11 @@
 
                            <i class="fa fa-envelope-o fa-fw"></i>邮箱：<small><a href="mailto:${config.authorEmail}" name="email" target="_blank" rel="external nofollow">sev7e0@mail.com</a></small>
                               </li>
-                              <li>
+                             <!-- <li>
                           <i class="fa fa-home fa-fw"></i>微博：<small><a href="${config.weibo}" name="点击查看我的微博" target="_blank" rel="external nofollow">一个丑人</a></small>
-                             </li>
+                             </li>-->
                            </ul>
                         <div class="clear"></div>
-                        <!-- 方案一：图标展示
-                        <ul class="widget-icon">
-                            <li class="weixin auto-shake" data-container="body"
-                                data-toggle="popover" data-trigger="hover" data-placement="bottom" data-html="true" data-content="<img src='${config.wxCode}' style='width: 130px;' alt='QR Code'>">
-                                <a class="tag-icon" name="微信" rel="external nofollow"><i class="fa fa-weixin"></i></a>
-                            </li>
-                            <li class="tqq auto-shake">
-                                <a class="tag-icon" href="javascript:window.open('tencent://message/?uin=${config.qq}&Site=www.${config.domain}&Menu=yes')" name="点击QQ联系我" target="blank" rel="external nofollow"><i class="fa fa-qq"></i></a>
-                            </li>
-                            <li class="tsina auto-shake">
-                                <a class="tag-icon" href="${config.weibo}" name="点击查看我的微博" target="_blank" rel="external nofollow"><i class="fa fa-weibo"></i></a>
-                            </li>
-                            <li class="github auto-shake">
-                                <a class="tag-icon" href="${config.github}" name="点击查看我的github" target="_blank" rel="external nofollow"><i class="fa fa-github"></i></a>
-                            </li>
-                        </ul>-->
-                        <!-- 方案二：列表展示
-                        <ul class="list-unstyled">
-                            <li><i class="fa fa-info-circle fa-fw"></i>博主：<small>李</small></li>
-                            <li><i class="fa fa-user-circle fa-fw"></i>职业：<small>进城劳务人员</small></li>
-                            <li><i class="fa fa-home fa-fw"></i>微博：<small>一个丑人</small></li>
-                            <li><i class="fa fa-envelope-square fa-fw"></i>邮箱：<small>sev7e0@mail.com</small></li>
-                        </ul>-->
                     </div>
                 </div>
             </div>
@@ -95,7 +72,7 @@
         <ul class="nav nav-tabs sidebar-tabs" role="tablist">
             <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-list"></i>近期文章</a></li>
             <li role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-thumbs-o-up"></i>站长推荐</a></li>
-            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-hand-peace-o"></i>随机文章</a></li>
+            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-random"></i>随机文章</a></li>
         </ul>
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="profile">
