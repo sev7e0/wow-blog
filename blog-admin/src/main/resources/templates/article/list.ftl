@@ -81,7 +81,7 @@
                     editable: false,
                     formatter: function (code, row, index) {
                         var title = code;
-                        title = title.length > 20 ? (title.substr(0, 20) + '...') : title;
+                        title = (title != null && title.length > 20) ? (title.substr(0, 20) + '...') : (title != null) ? title : "该文章还未拥有姓名";
                         var id = row.id;
                         var status = row.status ? '<span class="label label-success" style="margin-right: 5px;">已发布</span>' : '<span class="label label-danger" style="margin-right: 5px;">草稿</span>';
                         return status + '<a href="' + appConfig.wwwPath + '/article/' + id + '" target="_blank" name="' + code + '">' + title + '</a>';
