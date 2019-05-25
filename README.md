@@ -1,25 +1,35 @@
-一个基于OneBlog二次开发的简洁美观、功能强大并且自适应Java博客。使用springboot开发，前端使用Bootstrap。支持移动端自适应，配有完备的前台和后台管理功能。    
+一个基于OneBlog二次开发的简洁美观、功能强大并且自适应Java博客。使用springboot开发，
+前端使用Bootstrap。支持移动端自适应，配有完备的前台和后台管理功能。    
 
 ![JDK](https://img.shields.io/badge/JDK-1.8-green.svg)
 ![Maven](https://img.shields.io/badge/Maven-3.3.1-green.svg)
 ![MySQL](https://img.shields.io/badge/MySQL-5.6.4-green.svg)
 ![Redis](https://img.shields.io/badge/Redis-3.0.503-green.svg)
+![Docker](https://img.shields.io/badge/docker-1.13.1-green.svg)
+![Nginx](https://img.shields.io/badge/nginx-1.15.12-green.svg)
 [![license](https://img.shields.io/badge/license-GPL%20v3-yellow.svg)](https://gitee.com/yadong.zhang/DBlog/blob/master/LICENSE)
 
 ----
 
-# 重要声明
+# 声明
 
-本项目基于OneBlog二次开发，想获取最新信息请访问OneBlog[官网](https://www.zhyd.me)。
-
+本项目基于OneBlog二次开发。
+修复了相关bug并在原项目中提交PR，使用时，MySQL、Redis、Nginx都采用了Docker部署，详
+见我的[个人博客](http://blog.sev7e0.site),关于博客搭建模块。
 
 ----
 
-# Demo 演示
+# 图片展示
 
-[前台demo]()
+## 后台页面
 
-[后台demo(root,123456)]()
+![PC-后台首页](http://files.sev7e0.site/images/oneblog/20190525163416434.png "PC-后台首页")
+![PC-文章列表页](http://files.sev7e0.site/images/oneblog/20190525163314546.png "PC-文章列表页")
+
+
+## 前台页面
+
+![PC-首页](http://files.sev7e0.site/images/oneblog/20190525163332288.png "PC-首页")
 
 ----
 
@@ -31,7 +41,6 @@
 | blog-admin | 后台管理模块 | 该模块作为单独项目打包部署 |
 | blog-web | 前台模块 | 该模块作为单独项目打包部署 |
 | blog-file | 文件存储功能模块 | 支持local、七牛云和阿里云OSS |
-| ~~blog-spider~~ | 爬虫相关代码模块 | 已使用blog-hunter插件替代 |
 
 
 # 技术栈
@@ -40,6 +49,8 @@
 - Apache Shiro 1.2.2
 - Logback
 - Redis
+- Docker
+- Nginx
 - Lombok
 - Websocket
 - MySQL、Mybatis、Mapper、Pagehelper
