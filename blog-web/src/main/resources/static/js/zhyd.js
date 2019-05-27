@@ -10,7 +10,7 @@
 // 动态切换浏览器窗口title https://zhangge.net/
 jQuery(document).ready(function() {
     function c() {
-        document.title = document[a] ? "我在这里~~~ | " + d + "" : d
+        document.title = document[a] ? "我在这里~ |" + d + "" : d
     }
     var a, b, d = document.title;
     "undefined" != typeof document.hidden ? (a = "hidden", b = "visibilitychange") : "undefined" != typeof document.mozHidden ? (a = "mozHidden", b = "mozvisibilitychange") : "undefined" != typeof document.webkitHidden && (a = "webkitHidden", b = "webkitvisibilitychange");
