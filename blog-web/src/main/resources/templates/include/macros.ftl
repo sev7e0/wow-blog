@@ -1,9 +1,11 @@
 <#-- 公共顶部 -->
-<#macro header name="DBlog开源博客" keywords="" description="" canonical="" hasEditor=false>
+<#macro header name="个人博客" keywords="" description="" canonical="" hasEditor=false>
 <#include "/common/annotation.ftl">
 <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
+    <meta name="google-site-verification" content="NrBpn68pc-ZgWzYNLt6APL_r9xtFpjbtIOWqY84Yjts" />
+    <meta name="baidu-site-verification" content="MZ051Zkpko" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>

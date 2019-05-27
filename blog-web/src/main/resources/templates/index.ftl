@@ -1,6 +1,6 @@
 <#include "include/macros.ftl">
 <@compress single_line=true>
-<@header name="${config.siteName?if_exists} | 一个程序员的个人博客"
+<@header name="${config.siteName?if_exists} | 一个博客"
     keywords="${config.homeKeywords?if_exists}"
     description="${config.homeDesc?if_exists}"
     canonical="/${url?if_exists}">
