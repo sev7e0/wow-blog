@@ -1,9 +1,7 @@
 package com.zyd.blog.business.util;
 
-import com.zyd.blog.framework.exception.ZhydCommentException;
 import com.zyd.blog.util.RestClientUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.util.StringUtils;
 
 import javax.net.ssl.HttpsURLConnection;
 import java.io.OutputStream;
@@ -21,10 +19,6 @@ import java.util.Date;
  */
 @Slf4j
 public class BaiduPushUtil extends RestClientUtil {
-    /**
-     * 自行登录百度站长平台后获取响应的cookie
-     */
-    private static final String COOKIE = "";
 
     /**
      * 推送链接到百度站长平台
@@ -36,9 +30,6 @@ public class BaiduPushUtil extends RestClientUtil {
      * @return api接口响应内容
      */
     public static String doPush(String urlString, String params) {
-        if (StringUtils.isEmpty(COOKIE)) {
-            throw new ZhydCommentException("尚未设置百度站长平台的Cookie信息，该功能不可用！");
-        }
         log.info("{} REST url: {}", new Date(), urlString);
         HttpURLConnection connection = null;
         try {
@@ -49,7 +40,6 @@ public class BaiduPushUtil extends RestClientUtil {
             connection.setRequestProperty("Action", "1000");
             connection.setRequestProperty("User-Agent", USER_AGENT);
             connection.setRequestProperty("Connection", "keep-alive");
-            connection.setRequestProperty("Cookie", COOKIE);
             connection.setDoOutput(true);
             connection.setDoInput(true);
             // 设置连接超时时间，单位毫秒

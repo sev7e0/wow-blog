@@ -115,6 +115,7 @@ public class RestArticleController {
          * message	是	string	  错误描述
          */
         //{error":401,"message":"token is not valid"}
+        log.debug("推送URL为：{}",url);
         String result = BaiduPushUtil.doPush(url, params.toString());
         log.info(result);
         JSONObject resultJson = JSONObject.parseObject(result);
