@@ -16,5 +16,6 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = false)
 public class NoticeConditionVO extends BaseConditionVO {
 	private String status;
+	private Long limit;
 }
 

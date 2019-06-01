@@ -31,8 +31,14 @@
 		<if test="status != null and status != ''">
 			AND t.status = #{status}
 		</if>
-		ORDER BY
+		<if test="limit != null and limit != ''" >
+			ORDER BY RAND() limit #{limit}
+		</if>
+		<if test="limit == null and limit == ''" >
+			ORDER BY
 			t.create_time DESC
+		</if>
+
 	</select>
 </mapper>
 

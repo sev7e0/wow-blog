@@ -63,9 +63,10 @@ public class SysNoticeServiceImpl implements SysNoticeService {
      * @return
      */
     @Override
-    public List<SysNoticeDTO> listRelease() {
+    public List<SysNoticeDTO> listRelease(Long limit) {
         NoticeConditionVO vo = new NoticeConditionVO();
         vo.setStatus(NoticeStatusEnum.RELEASE.toString());
+        vo.setLimit(limit);
         List<SysNotice> list = sysNoticeMapper.findPageBreakByCondition(vo);
         if (CollectionUtils.isEmpty(list)) {
             return null;

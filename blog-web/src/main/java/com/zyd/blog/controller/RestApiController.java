@@ -151,10 +151,10 @@ public class RestApiController {
         return ResultUtil.success("");
     }
 
-    @PostMapping("/listNotice")
+    @PostMapping("/listNotice/{limit}")
     @BussinessLog(value = "公告列表", platform = PlatformEnum.WEB, save = false)
-    public ResponseVO listNotice() {
-        return ResultUtil.success("", noticeService.listRelease());
+    public ResponseVO listNotice(@PathVariable("limit") Long limit) {
+        return ResultUtil.success("", noticeService.listRelease(limit));
     }
 
 }

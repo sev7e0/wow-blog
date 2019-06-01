@@ -2,13 +2,11 @@ package com.zyd.blog.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.zyd.blog.business.annotation.BussinessLog;
+import com.zyd.blog.business.dto.SysNoticeDTO;
 import com.zyd.blog.business.entity.Article;
 import com.zyd.blog.business.enums.ArticleStatusEnum;
 import com.zyd.blog.business.enums.PlatformEnum;
-import com.zyd.blog.business.service.BizArticleArchivesService;
-import com.zyd.blog.business.service.BizArticleService;
-import com.zyd.blog.business.service.SysLinkService;
-import com.zyd.blog.business.service.SysUpdateRecordeService;
+import com.zyd.blog.business.service.*;
 import com.zyd.blog.business.vo.ArticleConditionVO;
 import com.zyd.blog.util.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +45,8 @@ public class RenderController {
     private SysLinkService sysLinkService;
     @Autowired
     private SysUpdateRecordeService updateRecordeService;
+    @Autowired
+    private SysNoticeService noticeService;
 
     /**
      * 加载首页的数据
@@ -186,10 +186,12 @@ public class RenderController {
     @BussinessLog(value = "进入文章[{2}]详情页", platform = PlatformEnum.WEB)
     public ModelAndView article(Model model, @PathVariable("articleId") Long articleId) {
         Article article = bizArticleService.getByPrimaryKey(articleId);
+        List<SysNoticeDTO> noticeList = noticeService.listRelease(1L);
         if (article == null || ArticleStatusEnum.UNPUBLISHED.getCode() == article.getStatusEnum().getCode()) {
             return ResultUtil.redirect("/error/404");
         }
         model.addAttribute("article", article);
+        model.addAttribute("notice", noticeList.get(0));
         // 上一篇下一篇
         model.addAttribute("other", bizArticleService.getPrevAndNextArticles(article.getCreateTime()));
         // 相关文章
@@ -229,7 +231,9 @@ public class RenderController {
      */
     @GetMapping("/guestbook")
     @BussinessLog(value = "进入留言板页", platform = PlatformEnum.WEB)
-    public ModelAndView guestbook() {
+    public ModelAndView guestbook(Model model) {
+        List<SysNoticeDTO> noticeList = noticeService.listRelease(1L);
+        model.addAttribute("notice", noticeList.get(0));
         return ResultUtil.view("guestbook");
     }
 
@@ -254,7 +258,9 @@ public class RenderController {
      */
     @GetMapping("/disclaimer")
     @BussinessLog(value = "进入免责声明页", platform = PlatformEnum.WEB)
-    public ModelAndView disclaimer() {
+    public ModelAndView disclaimer(Model model) {
+        List<SysNoticeDTO> noticeList = noticeService.listRelease(1L);
+        model.addAttribute("notice", noticeList.get(0));
         return ResultUtil.view("disclaimer");
     }
 

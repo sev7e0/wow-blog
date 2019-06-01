@@ -103,7 +103,7 @@
                         <li><a href="${config.siteUrl}/disclaimer" name="免责声明" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-file-o fa-fw"></i>免责声明</a></li>
                     </ul>
                 </p>
-                <p>托管于<a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wylo59db" target="_blank" name="阿里云-为了无法计算的价值" data-toggle="tooltip" data-placement="bottom" rel="external nofollow">阿里云</a> & · <a href="http://beian.miit.gov.cn/publish/query/indexFirst.action" target="_blank" name="查看备案信息" data-toggle="tooltip" data-placement="bottom" rel="external nofollow">京ICP备19021088号</a></p>
+                <p>托管于<a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wylo59db" target="_blank" name="阿里云-为了无法计算的价值" data-toggle="tooltip" data-placement="bottom" rel="external nofollow">阿里云</a> & · <a href="http://beian.miit.gov.cn" target="_blank" name="查看备案信息" data-toggle="tooltip" data-placement="bottom" rel="external nofollow">京ICP备19021088号</a></p>
                 <p>Copyright &copy; ${.now?string("yyyy")} All Rights Reserved | Powered by OneBlog  </p>
                 <#if url?exists && (url == "index")>
 

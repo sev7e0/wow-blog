@@ -136,7 +136,7 @@ $.extend({
                                     '           <div class="user-img">' + adminIcon + '<img class="userImage" src="' + filterXSS(comment.avatar) + '" onerror="this.src=\'' + appConfig.staticPath + '/img/user.png\'"></div>' +
                                     '           <div class="user-info">' +
                                     '              <div class="nickname">' +
-                                    '                 <a target="_blank" href="' + userUrl + '" rel="external nofollow"><strong>' + comment.nickname + '</strong></a>' +
+                                    '                 <a href="javascript:void(0);"><strong>' + comment.nickname + '</strong></a>' +
                                     '                <i class="icons os-' + comment.osShortName + '" title="' + comment.os + '"></i>' +
                                     '                <i class="icons browser-' + comment.browserShortName + '" title="' + comment.browser + '"></i>' +
                                     '              </div>            ' +

@@ -31,7 +31,7 @@
                         </ul>
                     </div>
                     <div class="article-footer overflow-initial">
-                        <span class="blog-description hitokoto num"></span>
+                        <span class="blog-description hitokoto num">${notice.content}</span>
                     </div>
                 </div>
             </div>
@@ -40,6 +40,6 @@
     </div>
 </div>
 <@footer>
-<script src="https://v1.hitokoto.cn/?encode=js&select=.hitokoto" defer></script>
+<!--<script src="https://v1.hitokoto.cn/?encode=js&select=.hitokoto" defer></script>-->
 </@footer>
 </@compress>

@@ -61,11 +61,11 @@
 
 
 <#-- blog-header -->
-<#macro blogHeader name="Header" weiboName="@我的微博">
+<#macro blogHeader name="Header" weiboName="我的微博">
     <div class="col-sm-12 blog-main">
         <div class="blog-header">
             <h4>${title}</h4>
-            <p class="blog-description" id="hitokoto"></p>
+            <p class="blog-description" id="hitokoto">${notice.content}</p>
             <div>
                 <a href="javascript:void(0);" target="_blank" name="点击QQ联系我" onclick="window.open('tencent://message/?uin=${config.qq}&amp;Site=www.${config.domain}&amp;Menu=yes')" rel="external nofollow"><i class="fa fa fa-qq fa-fw"></i>QQ联系</a>
                 |

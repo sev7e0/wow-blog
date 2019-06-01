@@ -33,5 +33,5 @@ public interface SysNoticeService extends AbstractService<Notice, Long> {
      *
      * @return
      */
-    List<SysNoticeDTO> listRelease();
+    List<SysNoticeDTO> listRelease(Long limit);
 }
