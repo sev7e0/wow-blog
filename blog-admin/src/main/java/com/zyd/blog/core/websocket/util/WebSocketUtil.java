@@ -24,6 +24,7 @@ public class WebSocketUtil {
 
     private static final String ONLINE_MSG_KEY = "online";
     private static final String NOTIFICATION_MSG_KEY = "notification";
+    private static final String NOTIFICATION = "服务消息：";
 
     private WebSocketUtil() {
         // 私有化构造方法，禁止new
@@ -60,7 +61,7 @@ public class WebSocketUtil {
      */
     public static void sendNotificationMsg(String msg, Set<Session> sessionSet) throws UnsupportedEncodingException {
         // 为了防止消息中存在特殊字符（比如换行符）等造成前台解析错误，此处编码一次。前台对应的需要解码
-        broadcast(generateMsg(NOTIFICATION_MSG_KEY, URLEncoder.encode(msg, Charsets.UTF_8.displayName())), sessionSet);
+        broadcast(generateMsg(NOTIFICATION_MSG_KEY, URLEncoder.encode(NOTIFICATION + msg, Charsets.UTF_8.displayName())), sessionSet);
     }
 
     /**

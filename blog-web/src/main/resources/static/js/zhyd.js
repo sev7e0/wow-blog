@@ -180,7 +180,7 @@ var wesocketMsgResolver = {
     },
     notification: function (value) {
         value && $.notification.show({
-            notification: value
+            notification: decodeURIComponent(value)
         });
     }
 };
@@ -228,9 +228,9 @@ $(function () {
         $.rating.init(5);
     }
 
-    if ($.bubble) {
-        $.bubble.init();
-    }
+    // if ($.bubble) {
+    //     $.bubble.init();
+    // }
 
     getCurrentDate(), setInterval(function () {
         getCurrentDate();
@@ -255,7 +255,7 @@ $(function () {
             }
         });
         // 默认取8085端口的程序
-        host = host || document.domain + ":8085";
+        host = host || document.domain + ":80";
         if (host) {
             // 申请显示通知的权限
             $.notification.requestPermission();
@@ -368,11 +368,11 @@ $(function () {
     if ($('#notice-box') && $('#notice-box')[0]) {
         $.ajax({
             type: "post",
-            url: "/api/listNotice",
+            url: "/api/listNotice/7",
             success: function (json) {
                 if (json.status == 200 && json.data && json.data.length > 0) {
                     var tpl = '{{#data}}<li class="scrolltext-title">'
-                        + '<a href="javascript:void(0)" rel="bookmark">{{&content}}</a>'
+                        + '<a href="javascript:return false;" rel="bookmark">{{&content}}</a>'
                         + '</li>{{/data}}';
                     var html = Mustache.render(tpl, json);
                     $("#notice-box").html(html);

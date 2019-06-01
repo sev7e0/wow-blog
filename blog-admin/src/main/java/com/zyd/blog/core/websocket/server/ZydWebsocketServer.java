@@ -24,6 +24,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Component
 public class ZydWebsocketServer {
 
+    private static final String on = "在线人数：";
+
     /**
      * 线程安全的socket集合
      */
@@ -42,7 +44,7 @@ public class ZydWebsocketServer {
         int count = onlineCount.incrementAndGet();
         log.info("[Socket] 有链接加入，当前在线人数为: {}", count);
 
-        WebSocketUtil.sendOnlineMsg(Integer.toString(count), webSocketSet);
+        WebSocketUtil.sendOnlineMsg(on + count, webSocketSet);
     }
 
     /**
@@ -52,7 +54,7 @@ public class ZydWebsocketServer {
     public void onClose() {
         int count = onlineCount.decrementAndGet();
         log.info("[Socket] 有链接关闭,当前在线人数为: {}", count);
-        WebSocketUtil.sendOnlineMsg(Integer.toString(count), webSocketSet);
+        WebSocketUtil.sendOnlineMsg(on + count, webSocketSet);
     }
 
     /**
