@@ -582,7 +582,7 @@ a:-webkit-any-link {
 
 /* 返回顶部 start */
 .to-top {
-    background: url(../img/back-top.png) no-repeat left top;
+    background: url(../img/back-top.png) no-repeat left bottom;
     width: 55px;
     height: 55px;
     color: #3194ff;
