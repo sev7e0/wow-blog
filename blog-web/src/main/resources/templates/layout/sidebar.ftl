@@ -13,15 +13,10 @@
                 <div id="feed_widget">
                     <div class="feed-about">
                            <ul class="list-unstyled">
-                               <li><i class="fa fa-info-circle fa-fw"></i>博主：<small>李</small></li>
-                               <li><i class="fa fa-user-circle fa-fw"></i>职业：<small>进城务工人员</small></li>
-                               <li>
-
-                            <i class="fa fa-github fa-fw"></i>GitHub：<small><a href="${config.github}" name="github" target="_blank" rel="external nofollow">Sev7e0</a></small>
-                               </li>
-                               <li>
-
-                           <i class="fa fa-envelope-o fa-fw"></i>邮箱：<small><a href="mailto:${config.authorEmail}" name="email" target="_blank" rel="external nofollow">sev7e0@mail.com</a></small>
+                               <li><i class="fa fa-id-card-o fa-fw"></i>博主：<small>李</small></li>
+                               <li><i class="fa fa-user-o fa-fw"></i>职业：<small>进城务工人员</small></li>
+                               <li><i class="fa fa-envelope-o fa-fw"></i>邮箱：<small><a href="mailto:${config.authorEmail}" name="email" target="_blank" rel="external nofollow">sev7e0@mail.com</a></small>
+                               <li><i class="fa fa-github fa-fw"></i>github：<small><a href="${config.github}" name="github" target="_blank" rel="external nofollow">sev7e0</a></small></li>
                               </li>
                              <!-- <li>
                           <i class="fa fa-home fa-fw"></i>微博：<small><a href="${config.weibo}" name="点击查看我的微博" target="_blank" rel="external nofollow">一个丑人</a></small>
