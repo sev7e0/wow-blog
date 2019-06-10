@@ -15,7 +15,7 @@ import java.util.List;
  * @since 1.0
  */
 @Repository
-public interface SysNoticeMapper extends BaseMapper<SysNotice>{
+public interface SysNoticeMapper extends BaseMapper<SysNotice> {
 
     /**
      * 分页查询

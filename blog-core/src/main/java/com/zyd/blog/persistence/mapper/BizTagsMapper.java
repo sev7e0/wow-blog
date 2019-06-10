@@ -15,7 +15,7 @@ import java.util.List;
  * @since 1.0
  */
 @Repository
-public interface BizTagsMapper extends BaseMapper<BizTags>{
+public interface BizTagsMapper extends BaseMapper<BizTags> {
 
     /**
      * 分页查询

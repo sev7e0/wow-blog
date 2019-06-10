@@ -27,7 +27,7 @@ import java.util.List;
  * @since 1.0
  */
 @Service
-public class SysUpdateRecordeServiceImpl implements SysUpdateRecordeService{
+public class SysUpdateRecordeServiceImpl implements SysUpdateRecordeService {
 
     @Autowired
     private SysUpdateRecordeMapper sysUpdateRecordeMapper;

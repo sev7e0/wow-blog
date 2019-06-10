@@ -15,7 +15,7 @@ import java.util.List;
  * @since 1.0
  */
 @Repository
-public interface SysUpdateRecordeMapper extends BaseMapper<SysUpdateRecorde>{
+public interface SysUpdateRecordeMapper extends BaseMapper<SysUpdateRecorde> {
 
     /**
      * 分页查询

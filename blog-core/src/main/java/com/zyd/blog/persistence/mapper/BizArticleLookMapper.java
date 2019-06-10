@@ -1,8 +1,8 @@
 package com.zyd.blog.persistence.mapper;
 
 import com.zyd.blog.business.vo.ArticleLookConditionVO;
-import com.zyd.blog.persistence.beans.BizArticleLook;
 import com.zyd.blog.plugin.BaseMapper;
+import com.zyd.blog.persistence.beans.BizArticleLook;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.List;
  * @since 1.0
  */
 @Repository
-public interface BizArticleLookMapper extends BaseMapper<BizArticleLook>{
+public interface BizArticleLookMapper extends BaseMapper<BizArticleLook> {
 
     /**
      * 分页查询

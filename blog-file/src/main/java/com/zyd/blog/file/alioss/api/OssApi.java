@@ -2,11 +2,11 @@ package com.zyd.blog.file.alioss.api;
 
 import com.aliyun.oss.OSSClient;
 import com.aliyun.oss.model.*;
-import com.zyd.blog.file.alioss.entity.BucketEntity;
 import com.zyd.blog.file.alioss.entity.CorsRoleEntity;
 import com.zyd.blog.file.alioss.entity.ObjectsRequestEntity;
 import com.zyd.blog.file.alioss.entity.RefererEntity;
 import com.zyd.blog.file.exception.OssApiException;
+import com.zyd.blog.file.alioss.entity.BucketEntity;
 import org.springframework.util.CollectionUtils;
 
 import java.io.ByteArrayInputStream;

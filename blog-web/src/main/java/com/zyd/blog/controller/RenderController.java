@@ -2,13 +2,13 @@ package com.zyd.blog.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.zyd.blog.business.annotation.BussinessLog;
-import com.zyd.blog.business.dto.SysNoticeDTO;
 import com.zyd.blog.business.entity.Article;
 import com.zyd.blog.business.enums.ArticleStatusEnum;
 import com.zyd.blog.business.enums.PlatformEnum;
-import com.zyd.blog.business.service.*;
 import com.zyd.blog.business.vo.ArticleConditionVO;
 import com.zyd.blog.util.ResultUtil;
+import com.zyd.blog.business.dto.SysNoticeDTO;
+import com.zyd.blog.business.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -220,6 +220,8 @@ public class RenderController {
     @GetMapping("/links")
     @BussinessLog(value = "进入友情链接页", platform = PlatformEnum.WEB)
     public ModelAndView links(Model model) {
+        List<SysNoticeDTO> noticeList = noticeService.listRelease(1L);
+        model.addAttribute("notice", noticeList.get(0));
         model.addAttribute("link", sysLinkService.listAllByGroup());
         return ResultUtil.view("links");
     }

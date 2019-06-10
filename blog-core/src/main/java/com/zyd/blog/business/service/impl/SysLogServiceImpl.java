@@ -5,16 +5,16 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zyd.blog.business.entity.Log;
 import com.zyd.blog.business.entity.User;
-import com.zyd.blog.business.enums.LogLevelEnum;
-import com.zyd.blog.business.enums.LogTypeEnum;
 import com.zyd.blog.business.enums.PlatformEnum;
 import com.zyd.blog.business.service.SysLogService;
-import com.zyd.blog.business.util.WebSpiderUtils;
 import com.zyd.blog.business.vo.LogConditionVO;
-import com.zyd.blog.persistence.beans.SysLog;
-import com.zyd.blog.persistence.mapper.SysLogMapper;
 import com.zyd.blog.util.RequestUtil;
 import com.zyd.blog.util.SessionUtil;
+import com.zyd.blog.business.enums.LogLevelEnum;
+import com.zyd.blog.business.enums.LogTypeEnum;
+import com.zyd.blog.business.util.WebSpiderUtils;
+import com.zyd.blog.persistence.beans.SysLog;
+import com.zyd.blog.persistence.mapper.SysLogMapper;
 import eu.bitwalker.useragentutils.UserAgent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -27,7 +27,6 @@ import org.springframework.util.CollectionUtils;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author yadong.zhang email:yadong.zhang0415(a)gmail.com

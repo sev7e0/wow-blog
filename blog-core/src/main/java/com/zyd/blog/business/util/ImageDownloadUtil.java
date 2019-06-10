@@ -1,11 +1,11 @@
 package com.zyd.blog.business.util;
 
-import com.zyd.blog.business.enums.FileUploadType;
 import com.zyd.blog.file.FileUploader;
 import com.zyd.blog.file.entity.VirtualFile;
 import com.zyd.blog.file.exception.GlobalFileException;
 import com.zyd.blog.file.util.FileUtil;
 import com.zyd.blog.plugin.file.GlobalFileUploader;
+import com.zyd.blog.business.enums.FileUploadType;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;

@@ -15,7 +15,7 @@ import java.util.List;
  * @since 1.0
  */
 @Repository
-public interface SysLinkMapper extends BaseMapper<SysLink>{
+public interface SysLinkMapper extends BaseMapper<SysLink> {
 
     /**
      * 分页查询

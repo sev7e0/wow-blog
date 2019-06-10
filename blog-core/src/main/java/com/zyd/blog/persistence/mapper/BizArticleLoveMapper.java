@@ -15,7 +15,7 @@ import java.util.List;
  * @since 1.0
  */
 @Repository
-public interface BizArticleLoveMapper extends BaseMapper<BizArticleLove>{
+public interface BizArticleLoveMapper extends BaseMapper<BizArticleLove> {
 
     /**
      * 分页查询

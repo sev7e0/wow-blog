@@ -1,10 +1,10 @@
 package com.zyd.blog.file;
 
-import com.zyd.blog.file.alioss.api.OssApi;
 import com.zyd.blog.file.entity.VirtualFile;
 import com.zyd.blog.file.exception.OssApiException;
-import com.zyd.blog.file.util.FileUtil;
 import com.zyd.blog.file.util.StreamUtil;
+import com.zyd.blog.file.alioss.api.OssApi;
+import com.zyd.blog.file.util.FileUtil;
 import org.springframework.util.DigestUtils;
 import org.springframework.util.StringUtils;
 

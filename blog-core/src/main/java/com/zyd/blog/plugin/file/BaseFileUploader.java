@@ -2,6 +2,9 @@ package com.zyd.blog.plugin.file;
 
 import com.zyd.blog.business.entity.File;
 import com.zyd.blog.business.entity.User;
+import com.zyd.blog.file.entity.VirtualFile;
+import com.zyd.blog.file.exception.GlobalFileException;
+import com.zyd.blog.util.SessionUtil;
 import com.zyd.blog.business.enums.ConfigKeyEnum;
 import com.zyd.blog.business.service.BizFileService;
 import com.zyd.blog.business.service.SysConfigService;
@@ -9,13 +12,10 @@ import com.zyd.blog.file.AliyunOssApiClient;
 import com.zyd.blog.file.ApiClient;
 import com.zyd.blog.file.LocalApiClient;
 import com.zyd.blog.file.QiniuApiClient;
-import com.zyd.blog.file.entity.VirtualFile;
-import com.zyd.blog.file.exception.GlobalFileException;
 import com.zyd.blog.framework.exception.ZhydException;
 import com.zyd.blog.framework.holder.SpringContextHolder;
 import com.zyd.blog.persistence.beans.BizFile;
 import com.zyd.blog.util.BeanConvertUtil;
-import com.zyd.blog.util.SessionUtil;
 import org.springframework.util.StringUtils;
 
 import java.util.Map;

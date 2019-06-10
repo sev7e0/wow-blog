@@ -15,7 +15,7 @@ import java.util.List;
  * @since 1.0
  */
 @Repository
-public interface SysTemplateMapper extends BaseMapper<SysTemplate>{
+public interface SysTemplateMapper extends BaseMapper<SysTemplate> {
 
     /**
      * 分页查询

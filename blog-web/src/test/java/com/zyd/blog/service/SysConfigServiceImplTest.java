@@ -1,8 +1,8 @@
 package com.zyd.blog.service;
 
 import com.alibaba.fastjson.JSON;
-import com.zyd.blog.BaseJunitTest;
 import com.zyd.blog.business.service.SysConfigService;
+import com.zyd.blog.BaseJunitTest;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

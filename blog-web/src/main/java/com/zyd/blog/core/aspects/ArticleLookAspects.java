@@ -1,11 +1,10 @@
 package com.zyd.blog.core.aspects;
 
 import com.zyd.blog.business.entity.ArticleLook;
-import com.zyd.blog.business.service.RedisService;
-import com.zyd.blog.core.schedule.ArticleLookTask;
 import com.zyd.blog.framework.holder.RequestHolder;
-import com.zyd.blog.util.IpUtil;
 import com.zyd.blog.util.SessionUtil;
+import com.zyd.blog.core.schedule.ArticleLookTask;
+import com.zyd.blog.util.IpUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -13,8 +12,6 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
-import org.springframework.data.redis.core.BoundListOperations;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
