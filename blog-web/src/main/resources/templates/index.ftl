@@ -67,7 +67,11 @@
                         </header>
                         <div class="entry-content">
                             <div class="archive-content">
-                                ${item.description?if_exists}
+                                <#if item.description?exists && (item.description?length gt 115)>
+                                    ${item.description?substring(0,115)}......
+                                <#else>
+                                    ${item.description}
+                                </#if>
                             </div>
                             <span class="title-l"></span>
                             <span class="entry-meta">
