@@ -9,10 +9,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>${article.title}-${config.siteName}</title>
+    <title>
+        <#if article.title?exists>
+            ${article.title}-${config.siteName}
+        <#else>
+            ${config.siteName}
+        </#if>
+    </title>
     <meta name="author" content="${config.authorName}(${config.authorEmail})">
     <meta name="keywords" content="${keywords}"/>
-    <meta name="description" content="${description}" id="meta_description">
+<#--    <meta name="description" content="${description}" id="meta_description">-->
     <link rel="canonical" href="${config.siteUrl}${canonical}" />
     <#include "/layout/quote.ftl">
     <#--黑白界面

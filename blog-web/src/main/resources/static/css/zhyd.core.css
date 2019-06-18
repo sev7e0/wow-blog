@@ -1174,7 +1174,17 @@ article .entry-content .archive-content {
     margin-bottom: 10px;
     color: #777;
     line-height: 1.6;
-    white-space: initial;
+    /*white-space: initial;*/
+}
+
+article .entry-content .archive-content .text {
+    width: 100%;  /*获取父级的高度*/
+    position: absolute;
+    top: -0.55em;  /* 调整位置 */
+    /* 下面的内容根据 是单行的样式, 调整好高度后可以替换成多行的样式 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 article .entry-content .title-l {

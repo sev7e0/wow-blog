@@ -221,7 +221,7 @@ $(function () {
     $(".showImage").fancybox();
 
     if ($("#scrolldiv")) {
-        $("#scrolldiv").textSlider({line: 1, speed: 300, timer: 5000});
+        $("#scrolldiv").textSlider({line: 1, speed: 300, timer: 10000});
     }
 
     if ($.rating) {
