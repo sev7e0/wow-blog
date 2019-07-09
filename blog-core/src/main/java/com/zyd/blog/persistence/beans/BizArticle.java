@@ -36,6 +36,7 @@ public class BizArticle extends AbstractDO {
     private String description;
     private String keywords;
     private Boolean comment;
+    private String originalUrl;
     @Transient
     private Integer lookCount;
     @Transient

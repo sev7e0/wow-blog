@@ -207,7 +207,9 @@ public class RenderController {
      */
     @GetMapping("/about")
     @BussinessLog(value = "进入关于页", platform = PlatformEnum.WEB)
-    public ModelAndView about() {
+    public ModelAndView about(Model model) {
+        List<SysNoticeDTO> noticeList = noticeService.listRelease(1L);
+        model.addAttribute("notice", noticeList.get(0));
         return ResultUtil.view("about");
     }
 

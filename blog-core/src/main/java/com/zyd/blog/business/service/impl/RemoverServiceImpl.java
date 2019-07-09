@@ -8,8 +8,8 @@ import com.zyd.blog.business.service.BizArticleService;
 import com.zyd.blog.business.service.BizArticleTagsService;
 import com.zyd.blog.business.service.BizTagsService;
 import com.zyd.blog.business.service.RemoverService;
-import com.zyd.blog.util.SessionUtil;
 import com.zyd.blog.business.util.ImageDownloadUtil;
+import com.zyd.blog.util.SessionUtil;
 import me.zhyd.hunter.Hunter;
 import me.zhyd.hunter.config.HunterConfig;
 import me.zhyd.hunter.entity.ImageLink;
@@ -63,7 +63,7 @@ public class RemoverServiceImpl implements RemoverService {
             return;
         }
         writerUtil.print("Congratulation ! 此次共整理到" + list.size() + "篇文章");
-        saveArticles(typeId, config, writerUtil, list);
+        saveArticles(typeId, config, writerUtil, list, null);
 
         writerUtil.print(String.format("搬家完成！耗时 %s ms.", (System.currentTimeMillis() - start)));
         writerUtil.shutdown();
@@ -82,12 +82,12 @@ public class RemoverServiceImpl implements RemoverService {
         for (String url : urls) {
             HunterProcessor hunter = new BlogHunterProcessor(url, convertImg, writerUtil);
             CopyOnWriteArrayList<VirtualArticle> list = hunter.execute();
-            this.saveArticles(typeId, hunter.getConfig(), writerUtil, list);
+            this.saveArticles(typeId, hunter.getConfig(), writerUtil, list, url);
         }
         writerUtil.shutdown();
     }
 
-    private void saveArticles(Long typeId, HunterConfig config, HunterPrintWriter writerUtil, CopyOnWriteArrayList<VirtualArticle> list) {
+    private void saveArticles(Long typeId, HunterConfig config, HunterPrintWriter writerUtil, CopyOnWriteArrayList<VirtualArticle> list, String url) {
         // 获取数据库中的标签列表
         Map<String, Long> originalTags = tagsService.listAll().stream().collect(Collectors.toMap(tag -> tag.getName().toUpperCase(), Tags::getId));
 
@@ -95,13 +95,13 @@ public class RemoverServiceImpl implements RemoverService {
         // 添加文章到数据库
         Article article = null;
         for (VirtualArticle spiderVirtualArticle : list) {
-            article = this.saveArticle(typeId, config.isConvertImg(), writerUtil, user, spiderVirtualArticle);
+            article = this.saveArticle(typeId, config.isConvertImg(), writerUtil, user, spiderVirtualArticle, url);
 
             this.saveTags(writerUtil, originalTags, article, spiderVirtualArticle);
         }
     }
 
-    private Article saveArticle(Long typeId, boolean isConvertImg, HunterPrintWriter writerUtil, User user, VirtualArticle virtualArticle) {
+    private Article saveArticle(Long typeId, boolean isConvertImg, HunterPrintWriter writerUtil, User user, VirtualArticle virtualArticle, String url) {
         Article article = new Article();
         article.setContent(isConvertImg ? parseImgForHtml(virtualArticle, writerUtil) : virtualArticle.getContent());
         article.setTitle(virtualArticle.getTitle());
@@ -113,6 +113,7 @@ public class RemoverServiceImpl implements RemoverService {
         // 默认是草稿
         article.setStatus(ArticleStatusEnum.UNPUBLISHED.getCode());
         article.setIsMarkdown(false);
+        article.setOriginalUrl(url);
         article.setDescription(virtualArticle.getDescription());
         article.setKeywords(virtualArticle.getKeywords());
         article = articleService.insert(article);

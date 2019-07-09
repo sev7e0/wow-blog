@@ -198,6 +198,13 @@ public class Article {
         return this.bizArticle.getBizType();
     }
 
+    public String getOriginalUrl() {
+        return this.bizArticle.getOriginalUrl();
+    }
+    public void setOriginalUrl(String url) {
+        this.bizArticle.setOriginalUrl(url);
+    }
+
     public int getLookCount(){
         Integer lookCount = this.bizArticle.getLookCount();
         return lookCount == null ? 0 : lookCount;

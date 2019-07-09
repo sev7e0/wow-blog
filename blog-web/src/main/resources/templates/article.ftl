@@ -5,10 +5,10 @@
 </#if>
 <div class="container custome-container">
     <nav class="breadcrumb">
-        <a class="crumbs" name="返回首页" href="${config.siteUrl}" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-home"></i>首页</a>
+        <a class="crumbs" name="返回首页" href="${config.siteUrl}"  data-placement="bottom"><i class="fa fa-home"></i>首页</a>
         <i class="fa fa-angle-right"></i>
-        <a href="${config.siteUrl}/type/${article.typeId}" name="点击查看该分类文章" data-toggle="tooltip" data-placement="bottom">${article.type.name}</a>
-        <i class="fa fa-angle-right"></i>正文
+        <a href="${config.siteUrl}/type/${article.typeId}" data-title="点击查看该分类文章" data-toggle="tooltip" data-placement="bottom">${article.type.name}</a>
+        <i class="fa fa-angle-right"></i>
     </nav>
     <div class="row article-body">
         <div class="col-sm-8 blog-main">
@@ -17,19 +17,24 @@
                     <#if article.original?string('true','false') == 'true'>
                         <span class="article-blockquote article-blockquote-green"></span>
                         <span class="article-original article-original-green">
-                            <a href="${config.siteUrl}/article/${article.id}">原创</a>
+                            <a href="${config.siteUrl}/article/${article.id}"  data-placement="bottom">原创</a>
                         </span>
                     <#else>
                         <span class="article-blockquote article-blockquote-red"></span>
                         <span class="article-original article-original-red">
-                            <a href="${config.siteUrl}/article/${article.id}">转载</a>
+                            <#if article.originalUrl??>
+                                <a href="${article.originalUrl}" data-original-title="点击查看原文章" target="_blank" rel="external nofollow" data-toggle="tooltip" data-placement="bottom">转载</a>
+                            <#else >
+                                <a href="javascript:void(0);" data-original-title="暂未找到原文章链接" data-toggle="tooltip" data-placement="bottom">转载</a>
+                            </#if>
+
                         </span>
                     </#if>
                     <div class="blog-info-meta pull-right">
                         <ul class="list-unstyled list-inline">
                             <li><i class="fa fa-clock-o fa-fw"></i>${article.createTime?string('yyyy-MM-dd')}</li>
-                            <li><i class="fa fa-eye fa-fw"></i><a class="pointer" data-original-title="${article.lookCount!(0)}人浏览了该文章" data-toggle="tooltip" data-placement="bottom">浏览 (<num>${article.lookCount!(0)}</num>)</a></li>
-                            <li><a href="#comment-box" data-original-title="${article.commentCount!(0)}人评论了该文章" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-comments-o fa-fw"></i>评论 (${article.commentCount!(0)})</a></li>
+                            <li><i class="fa fa-eye fa-fw"></i><a class="pointer" data-original-title="${article.lookCount!(0)}人浏览了该文章"  data-placement="bottom">浏览 (<num>${article.lookCount!(0)}</num>)</a></li>
+                            <li><a href="#comment-box" data-original-title="${article.commentCount!(0)}人评论了该文章"  data-placement="bottom"><i class="fa fa-comments-o fa-fw"></i>评论 (${article.commentCount!(0)})</a></li>
                         </ul>
                     </div>
                 </div>
@@ -75,7 +80,7 @@
                         <li>
                             <strong>本文标签：</strong>
                                 <#list article.tags as item>
-                                    <a href="${config.siteUrl}/tag/${item.id?c}" class="c-label" data-original-title="${item.name}" data-toggle="tooltip" data-placement="bottom" target="_blank">${item.name}</a>
+                                    <a href="${config.siteUrl}/tag/${item.id?c}" class="c-label" data-original-title="点击查看${item.name}相关文章" data-toggle="tooltip" data-placement="bottom" target="_blank">${item.name}</a>
                                 </#list>
                         </li>
                         <li>
@@ -83,7 +88,7 @@
                             <#if article.original?string('true','false') == 'true'>
                             本站原创文章，于${article.createTime?string('yyyy年MM月dd日')}由<a href="${config.siteUrl}" target="_blank" data-original-title="${config.siteName}" data-toggle="tooltip" data-placement="bottom"><strong>${config.authorName}</strong></a>发布，转载请注明出处
                             <#else>
-                            本文为互联网转载文章，出处已在文章中说明(部分除外)。如果侵权，请<a target="_blank" href="mailto:sev7e0@gmail.com" title="点击给我发邮件" data-toggle="tooltip" data-placement="bottom"><strong>联系本站长</strong></a>删除，谢谢。
+                            本文为互联网转载文章，文章开头处点击<strong>转载</strong>可查看原文链接(部分除外)。如果侵权，请<a target="_blank" href="mailto:sev7e0@gmail.com" data-toggle="tooltip" data-title="点击给我发邮件" data-placement="bottom"><strong>联系本站长</strong></a>删除，谢谢。
                             </#if>
                         </li>
                     </ul>
@@ -137,15 +142,15 @@
                                 <div class="line-container">
                                     <div class="line-right">
                                         <div class="text">
-                                            <a href="${config.siteUrl}/article/${item.id?c}" data-original-title="${item.lookCount?c}人浏览了该文章" data-toggle="tooltip" data-placement="bottom">
+                                            <a href="${config.siteUrl}/article/${item.id?c}">
                                                 ${item.title}
                                             </a>
                                         </div>
                                         <div class="text">
                                             <#--<div style="display: inline-block">热门指数：</div>-->
                                             <#--<div class="rating ignore" data-star="5"></div>-->
-                                            <span class="views" name="" data-toggle="tooltip" data-placement="bottom" data-original-title="文章阅读次数"><i class="fa fa-eye fa-fw"></i>浏览(${item.lookCount!(0)})</span>
-                                            <span class="comment" name="" data-toggle="tooltip" data-placement="bottom" data-original-title="文章评论次数">
+                                            <span class="views" data-toggle="tooltip"  data-placement="bottom" data-original-title="文章阅读次数"><i class="fa fa-eye fa-fw"></i>浏览(${item.lookCount!(0)})</span>
+                                            <span class="comment" data-toggle="tooltip"  data-placement="bottom" data-original-title="文章评论次数">
                                                 <a href="${config.siteUrl}/article/${item.id?c}#comment-box" rel="external nofollow">
                                                     <i class="fa fa-comments-o fa-fw"></i>评论(${item.commentCount!(0)})
                                                 </a>
@@ -196,14 +201,18 @@
 </div>
 <@footer>
     <script type="text/javascript">
-        /*
-            百度分享
-            建议改成自己的百度分享js，否则你是没法查看分享的统计结果的。
-         */
-        var bdText = $("#meta_description").attr("content")+" - by ${config.domain}";
-        // 如果文章没有封面图，则取默认的图片
-        var coverImg = $("#cover-img").attr("src") || "${config.staticWebSite}/img/default_article_cover.jpg";
-        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":bdText,"bdMini":"2","bdMiniList":["mshare","qzone","tsina","bdysc","weixin","renren","tqq","kaixin001","tqf","tieba","douban","bdhome","sqq","youdao","sdo","qingbiji","mail","isohu","ty","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":coverImg,"bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
     </script>
     <!--<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>-->
     <script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>

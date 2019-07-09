@@ -19,7 +19,7 @@
                     <div class="feed-about">
                         <ul class="list-unstyled">
                             <li><i class="fa fa-id-card-o fa-fw"></i>博主：
-                                <small>李</small>
+                                <small><a href="${config.siteUrl}/about" title="个人介绍" data-toggle="tooltip" data-placement="bottom">李</a></small>
                             </li>
                             <li><i class="fa fa-user-o fa-fw"></i>职业：
                                 <small>进城务工人员</small>
