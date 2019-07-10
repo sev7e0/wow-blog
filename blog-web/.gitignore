@@ -25,3 +25,4 @@
 /.nb-gradle/
 /src/main/resources/application-prod.yml
 /src/main/resources/rebel.xml
+/src/main/resources/templates/about.ftl

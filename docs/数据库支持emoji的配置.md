@@ -3,7 +3,13 @@
 ps: 修改数据库配置可以一劳永逸，直接sql修改当机器重启时新加的设置会被还原
 
 ### 1.修改数据库配置文件
-windows下的为my.ini(linux下的为my.cnf)
+docker 下需要挂载外置配置文件mysqld.cnf
+
+```shell
+-v $PWD/config/mysql_config/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
+```
+
+windows下的为my.ini
 windows下的my.ini路径：C:\ProgramData\MySQL\MySQL Server 5.6
 
 ```bash

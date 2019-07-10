@@ -22,10 +22,6 @@
     <link href="https://cdn.bootcss.com/switchery/0.8.2/switchery.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput-typeahead.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" rel="stylesheet">
-    <#--
-    <link href="https://cdn.bootcss.com/pnotify/3.2.1/pnotify.css" rel="stylesheet">
-    <link href="https://cdn.bootcss.com/pnotify/3.2.1/pnotify.buttons.css" rel="stylesheet">
-    <link href="https://cdn.bootcss.com/pnotify/3.2.1/pnotify.nonblock.css" rel="stylesheet">-->
 
     <link href="/assets/css/zhyd.core.css" rel="stylesheet">
     <#nested>
@@ -37,7 +33,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="/" class="site_title"><i class="fa fa-coffee"></i> <span>${config.siteName}</span></a>
+                    <a href="/" class="site_title"><i class="fa fa-coffee"></i> <span>Blog</span></a>
                 </div>
                 <div class="clearfix"></div>
                 <@shiro.user>
