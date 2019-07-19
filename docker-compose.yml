@@ -1,0 +1,21 @@
+version: 3
+services:
+  blog-admin:
+    image: sev7e0/blog-admin:v1
+    container_name: admin
+    volumes:
+      - ./logs/admin:/logs/
+    ports:
+      - 8099:8099
+    env_file:
+      - ./blog-admin/admin.env
+
+  blog-web:
+    image: sev7e0/blog-web:v1
+    container_name: web
+    volumes:
+      - ./logs/admin:/logs/
+    ports:
+      - 8088:8088
+    env_file:
+      - ./blog-web/web.env

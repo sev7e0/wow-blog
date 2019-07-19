@@ -17,21 +17,18 @@
 修复了相关bug并在原项目中提交PR，使用时，MySQL、Redis、Nginx都采用了Docker部署，详
 见我的[个人博客](http://blog.sev7e0.site),关于博客搭建模块。
 
-----
+# 部署
 
-# 图片展示
+## docker 方式
 
-## 后台页面
+直接启动
+```shell
+docker-compose -f ./docker-compose.yml up 
 
-![PC-后台首页](http://files.sev7e0.site/images/oneblog/20190525163416434.png "PC-后台首页")
-![PC-文章列表页](http://files.sev7e0.site/images/oneblog/20190525163314546.png "PC-文章列表页")
+```
 
 
-## 前台页面
 
-![PC-首页](http://files.sev7e0.site/images/oneblog/20190525163332288.png "PC-首页")
-
-----
 
 # 模块划分
 

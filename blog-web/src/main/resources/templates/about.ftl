@@ -15,7 +15,19 @@
                 <div class="info">
                     <p>
                         菜鸡程序员
-                    </p>
+                    </p><br>
+                    <p>
+                        在大数据的路上艰难前行，需要一盏明灯。
+                    </p><br>
+                    <p>
+                        Java、Scala 我都行，逼急了也能写点 Python。
+                    </p><br>
+                    <p>
+                        Spark、Kafka 了解的多一点，其他像 Hadoop、HBase、Flink也略知一二。
+                    </p><br>
+                    <p>
+                        若您能渡我出苦海<a target="_blank" href="mailto:sev7e0@gmail.com" title="点击获取我的简历" data-toggle="tooltip" data-placement="bottom" rel="external nofollow"><strong> call me ！</strong></a>
+                    </p><br>
                 </div>
                 <h5 class="custom-title"><i class="fa fa-coffee fa-fw"></i><strong>关于博客</strong><small></small></h5>
                 <div class="info">
