@@ -17,15 +17,15 @@
                 return Notification.permission === 'granted';
             },
             requestPermission: function () {
-                console.log("当前服务器消息只能使用console查看，因为穷不想买ssl");
+                // console.log("当前服务器消息只能使用console查看，因为穷不想买ssl");
                 //验证浏览器是否支持Notification，如果不支持打印提示信息并返回
                 if (!this.isSupported()) {
-                    // console.log('当前浏览器不支持Notification API');
+                    console.log('当前浏览器不支持Notification API');
                     return;
                 }
                 //该方法将会询问用户是否允许显示通知,不能由页面调用(onload)，必须由用户主动事件触发(onclick等)
                 //当用户同意之后，再次调用该方法则无效，即该方法仅对Notification.Permission不为'granted'的时候起作用
-                // Notification.requestPermission(function (status) {
+                Notification.requestPermission(function (status) {
                     //status是授权状态，如果用户允许显示桌面通知，则status为'granted'
                     // console.log('status: ' + status);
                     //permission只读属性:
@@ -34,7 +34,7 @@
                     //  denied  用户拒绝授权 不允许显示通知
                     var permission = Notification.permission;
                     // console.log('permission: ' + permission);
-                // });
+                });
             },
             show: function (options) {
                 // this.requestPermission();
@@ -119,17 +119,17 @@
 
                 //连接成功建立的回调方法
                 this._this.onopen = function (event) {
-                    // console.log("与消息服务器连接成功...");
+                    console.log("与消息服务器连接成功...");
                     // console.log("当前服务器消息只能使用console查看，因为穷不想买ssl");
                 };
 
                 //接收到消息的回调方法
                 this._this.onmessage = function (event) {
-                    // this.notification.show({notification: event.data});
-                    var d = event.data;
-                    op.callback(d);
+                    // const d = event.data;
+                    // this.notification.show({notification: JSON.parse(d)["msg"]});
+                    op.callback(event.data);
                     //后台为了特殊字符进行了转码，需要解码
-                    console.log(decodeURIComponent(JSON.parse(d)["msg"]));
+                    // console.log(decodeURIComponent(JSON.parse(d)["msg"]));
                 };
 
                 //连接关闭的回调方法

@@ -44,8 +44,18 @@
                     </h1>
                     <div class="blog-info-body ${article.isMarkdown?string('markdown-body editor-preview-active-side', '')}">
                         ${article.content}
+                        <#if article.original?string('true','false') == 'true'>
+                            <div align="center">
+                                <img src="https://files.sev7e0.site/images/logo.gif" alt="sev7e0" width="200">
+                                <br>
+                                <sub>Write by
+                                    <a href="https://github.com/sev7e0">sev7e0</a>
+                                </sub>
+                            </div>
+                        </#if>
+
                     </div>
-                    <div class="separateline"><span>正文到此结束</span></div>
+                    <div class="separateline"><span>end</span></div>
                     <div id="social" style="margin-bottom: 45px;">
                         <div class="social-main">
                             <span class="like">
@@ -59,10 +69,7 @@
                                 <span class="share-s"><a href="javascript:void(0)" id="share-s" name="分享"><i class="fa fa-share-alt"></i>分享</a></span>
                                 <div id="share" style="display: none">
                                     <ul class="bdsharebuttonbox bdshare-button-style1-16" data-bd-bind="1516426362121">
-                                        <li><a name="分享到人人网" class="fa fa-renren" data-cmd="renren" onclick="return false;" href="#"></a></li>
-                                        <li><a name="分享到腾讯微博" class="fa fa-pinterest-square" data-cmd="tqq" onclick="return false;" href="#"></a></li>
-                                        <li><a name="分享到QQ空间" class="fa fa-qq" data-cmd="qzone" onclick="return false;" href="#"></a></li>
-                                        <li><a name="分享到新浪微博" class="fa fa-weibo" data-cmd="tsina" onclick="return false;" href="#"></a></li>
+                                        <li><a name="分享到微博" class="fa fa-weibo" data-cmd="tsina" onclick="return false;" href="#"></a></li>
                                         <li><a name="分享到微信" class="fa fa-weixin" data-cmd="weixin" onclick="return false;" href="#"></a></li>
                                         <li><a name="更多" class="bds_more fa fa-plus-square" data-cmd="more" onclick="return false;" href="#"></a></li>
                                     </ul>
@@ -97,7 +104,7 @@
             <!--隐藏广告-->
             <!--<div class="blog-body">
                 <a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wylo59db&utm_source=wylo59db" target="_blank" rel="external nofollow">
-                    <img src="${config.staticWebSite}/img/ad/aliyun_sale1000-60.png" alt="阿里云首购8折" class="img-responsive" style="width: 100%;">
+                    <img src="${config.staticWebSite}/img/ad/aliyun_sale1000-60.png" alt="" class="img-responsive" style="width: 100%;">
                 </a>
             </div>-->
             <div class="blog-body prev-next">

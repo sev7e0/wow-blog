@@ -90,7 +90,7 @@ public class WebSocketUtil {
      *         客户端session列表
      * @throws IOException
      */
-    private static void broadcast(String message, Set<Session> sessionSet) {
+    private synchronized static void broadcast(String message, Set<Session> sessionSet) {
         if (CollectionUtils.isEmpty(sessionSet)) {
             return;
         }
