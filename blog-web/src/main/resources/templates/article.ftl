@@ -129,7 +129,7 @@
                             </span>
                         </a>
                     <#else >
-                        <a href="${config.siteUrl}/article/1" rel="nofollow next">
+                        <a href="javascript:void(0)" rel="nofollow next">
                             <span class="meta-nav" data-original-title="已经到最后一篇了" data-toggle="tooltip" data-placement="bottom"><span class="post-nav">下一篇 <i class="fa fa-angle-right"></i></span>
                                 <br>已经到最后一篇了
                             </span>
