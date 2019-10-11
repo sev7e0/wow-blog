@@ -74,7 +74,7 @@ public class ZydWebsocketServer {
      * @return
      */
     public int getOnlineUserCount() {
-        return onlineCount.get();
+        return webSocketSet.size();
     }
 
     /**

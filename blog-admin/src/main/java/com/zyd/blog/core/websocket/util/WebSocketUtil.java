@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.Charsets;
 import org.springframework.util.CollectionUtils;
 
+import javax.websocket.OnMessage;
 import javax.websocket.Session;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -71,13 +72,18 @@ public class WebSocketUtil {
      *         消息内容
      * @param session
      *         客户端session
-     * @throws IOException
      */
+    @OnMessage
     private static void sendMessage(String message, Session session) {
         try {
             session.getAsyncRemote().sendText(message);
         } catch (Exception e) {
-            log.error("[Socket] websocket-->向客户端发送数据发生异常", e);
+            try {
+                session.close();
+            } catch (IOException ex) {
+                log.error("[Socket] websocket 关闭异常: {}", e.getMessage());
+            }
+            log.warn("[Socket] websocket-->向客户端发送数据发生异常: {}", e.getMessage());
         }
     }
 
@@ -90,16 +96,16 @@ public class WebSocketUtil {
      *         客户端session列表
      * @throws IOException
      */
-    private synchronized static void broadcast(String message, Set<Session> sessionSet) {
+    private static void broadcast(String message, Set<Session> sessionSet) {
         if (CollectionUtils.isEmpty(sessionSet)) {
             return;
         }
         // 多线程群发
         for (Session entry : sessionSet) {
-            if (null != entry && entry.isOpen()) {
-                sendMessage(message, entry);
-            } else {
-                sessionSet.remove(entry);
+            synchronized(entry){
+                if (entry.isOpen()) {
+                    sendMessage(message, entry);
+                } else sessionSet.remove(entry);
             }
         }
     }
