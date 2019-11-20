@@ -78,9 +78,8 @@
                         <li>
                             <a href="${item.sourceUrl}#comment-${item.id?c}" name="${item.briefContent?if_exists}"
                                rel="external nofollow" data-toggle="tooltip" data-placement="bottom">
-                                <img alt="${item.nickname?if_exists}" src="${item.avatar?if_exists}"
-                                     class="avatar auto-shake" height="64" width="64"
-                                     onerror="this.src='${config.staticWebSite}/img/user.png'"/>
+                                <img alt="${item.nickname?if_exists}" src="${config.staticWebSite}/img/user.png"
+                                     class="avatar auto-shake" height="64" width="64"/>
                                 <span class="comment-author">${item.nickname?if_exists}</span> ${item.briefContent?if_exists}
                             </a>
                         </li>
